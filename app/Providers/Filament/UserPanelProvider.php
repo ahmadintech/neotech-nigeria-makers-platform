@@ -44,42 +44,28 @@ class UserPanelProvider extends PanelProvider
                 ],
 
                 'success' => [
-                    500 => '#008751', // Same Nigeria Green for success
-                ],
-
-                'danger' => [
-                    500 => '#d32f2f', // Standard red
+                    500 => '#008751',
                 ],
 
                 'warning' => [
-                    500 => '#ffb300', // Amber/Gold (official accents)
+                    500 => '#ffb300',
                 ],
 
                 'info' => [
-                    500 => '#1565c0', // Deep blue (trustworthy, official look)
+                    500 => '#1565c0',
                 ],
-
-                'gray' => [
-                    50  => '#f9fafb',
-                    100 => '#f3f4f6',
-                    200 => '#e5e7eb',
-                    300 => '#d1d5db',
-                    400 => '#9ca3af',
-                    500 => '#6b7280',
-                    600 => '#4b5563',
-                    700 => '#374151',
-                    800 => '#1f2937',
-                    900 => '#111827',
-                ],
-
                 'accent' => [
-                    500 => '#fbc02d', // Gold accent
+                    500 => '#fbc02d',
                 ],
+                'gray' => Color::Slate,
+
+                'danger' => Color::Red,
             ])
 
             // ->font('Poppins');
             ->brandLogo(asset('images/logo.png'))
             ->brandLogoHeight('2rem')
+            ->brandName('Federal Government of Nigeria')
             ->discoverResources(in: app_path('Filament/User/Resources'), for: 'App\Filament\User\Resources')
             ->discoverPages(in: app_path('Filament/User/Pages'), for: 'App\Filament\User\Pages')
             ->pages([
