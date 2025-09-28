@@ -73,8 +73,11 @@ class UserPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/User/Widgets'), for: 'App\Filament\User\Widgets')
             ->widgets([
-                AccountWidget::class,
-                FilamentInfoWidget::class,
+                 \App\Filament\User\Widgets\DashboardStats::class,
+                // \App\Filament\User\Widgets\ConnectionStats::class,
+                // \App\Filament\User\Widgets\ActivityFeed::class,
+                // \App\Filament\User\Widgets\AddInnovation::class,
+                // \App\Filament\User\Widgets\MyInnovations::class,
             ])
             ->middleware([
                 EncryptCookies::class,
